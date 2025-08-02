@@ -1,23 +1,90 @@
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-body { color: #333; background: #fff; }
-a { color: #ecf0f1; text-decoration: none; }
-.container { display: flex; flex-wrap: wrap; max-width: 900px; margin: 2rem auto; }
-.sidebar { background: #2c3e50; color: #ecf0f1; padding: 1.5rem; width: 100%; }
-.sidebar h2, .sidebar h3 { margin-top: 1.25rem; }
-.sidebar ul { list-style: none; padding-left: 0; }
-.sidebar li { margin: .5rem 0; }
-.sidebar a { color: #ecf0f1; }
-.main-content { padding: 1.5rem; width: 100%; }
-.main-content h1 { font-size: 2rem; margin-bottom: .5rem; }
-.role { font-size: 1rem; color: #666; margin-bottom: 1.5rem; }
-.summary, .experience, .education { margin-bottom: 2rem; }
-.summary h2, .experience h2, .education h2 { font-size: 1.25rem; margin-bottom: .75rem; }
-.exp-item { margin-bottom: 1.25rem; }
-hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; }
-@media(min-width:768px) {
-  .sidebar { width: 30%; }
-  .main-content { width: 70%; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
-@media(max-width:767px) {
-  .sidebar, .main-content { width: 100%; }
+body {
+  color: #333;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+.sidebar {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  width: 100%;
+}
+.sidebar h2, .sidebar h3 {
+  margin-top: 1.25rem;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin: 0.5rem 0;
+}
+.sidebar a {
+  color: #ecf0f1;
+}
+.resume-download {
+  margin-top: 1.5rem;
+}
+.download-link {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.download-link:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  padding: 1.5rem;
+  width: 100%;
+}
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.role {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+.summary, .experience, .education {
+  margin-bottom: 2rem;
+}
+.summary h2, .experience h2, .education h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.exp-item {
+  margin-bottom: 1.25rem;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+@media(min-width:768px) {
+  .sidebar {
+    width: 30%;
+  }
+  .main-content {
+    width: 70%;
+  }
 }
