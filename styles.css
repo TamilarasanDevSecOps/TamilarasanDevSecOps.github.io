@@ -1,0 +1,134 @@
+:root {
+  --primary: #0066cc;
+  --light-bg: #f3f6f9;
+  --dark-text: #333;
+  --accent: #0055aa;
+  --transition: 0.3s;
+  --text-lg: 1.1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: #fff;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+#top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#top-nav a {
+  margin: 0 0.75rem;
+  color: var(--dark-text);
+  font-size: var(--text-lg);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+#top-nav a:hover {
+  color: var(--accent);
+}
+
+#mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--text-lg);
+  margin-left: 1rem;
+}
+
+section {
+  max-width: 860px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.skill‑grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skill‑bar {
+  display: inline-block;
+  height: 0.5rem;
+  background: #eee;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  position: relative;
+}
+
+.skill‑bar::after {
+  content: attr(data‑percent);
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--dark-text);
+}
+
+.skill‑bar[data‑percent]:hover::after {
+  color: var(--primary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--light-bg);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  #top-nav {
+    flex-wrap: wrap;
+  }
+
+  #mobile-toggle {
+    display: block;
+  }
+
+  #top-nav a {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  #top-nav.show-menu a {
+    display: block;
+  }
+}
